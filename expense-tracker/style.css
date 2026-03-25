@@ -56,7 +56,7 @@ h2 {
 
 .summary {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
 	gap: 24px;
 	margin-bottom: 24px;
 }
@@ -289,5 +289,32 @@ button[type="submit"]:active {
 
 	.transaction-list {
 		max-width: 300px;
+	}
+}
+@media (max-width: 480px) {
+	.container {
+		padding: 24px;
+	}
+
+	.summary {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.balance-container h1 {
+		font-size: 2.5rem;
+	}
+
+	.income p,
+	.expenses p {
+		font-size: 1.5rem;
+	}
+
+	.transaction {
+		padding: 14px 16px;
+	}
+
+	h1 {
+		font-size: 1.8rem;
 	}
 }
